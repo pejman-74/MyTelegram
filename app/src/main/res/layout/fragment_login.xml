@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.auth.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_cl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/toolbar_tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/_16sdp"
+            android:animateLayoutChanges="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@color/text_color_1"
+        app:ccpDialog_backgroundColor="@color/colorPrimary"
+        app:ccpDialog_showFastScroller="true"
+        app:ccpDialog_textColor="@color/text_color_1"
+        app:ccp_areaCodeDetectedCountry="true"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_autoDetectLanguage="true"
+        app:ccp_autoFormatNumber="true"
+        app:ccp_hintExampleNumber="true"
+        app:ccp_hintExampleNumberType="MOBILE"
+        app:ccp_padding="@dimen/_15sdp"
+        app:ccp_showFlag="false"
+        app:ccp_showFullName="true"
+        app:ccp_showNameCode="true"
+        app:ccp_showPhoneCode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_cl" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_carrier_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:gravity="center_horizontal"
+        android:hint="@string/phone_number"
+        android:textColor="@color/text_color_1"
+        android:textColorHint="@color/text_color_3"
+        android:textSize="@dimen/_20ssp"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:backgroundTint="@color/text_color_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ccp" />
+
+    <com.mytelegram.util.custom_view.ProgressFloatingActionButton
+        android:id="@+id/pfab_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="@dimen/_2sdp"
+        app:fabCustomSize="@dimen/_40sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/_25sdp"
+        app:srcCompat="@drawable/ic_arrow"
+        app:tint="@color/text_color_1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

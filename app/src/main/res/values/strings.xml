@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MyTelegram</string>
+    <string name="verification_code">Verification code</string>
+    <string name="enter_the_verification_code_sent_by_sms_to">Enter the verification code sent by SMS to :</string>
+    <string name="Phone_number_is_not_valid">Phone number is\'t valid</string>
+    <string name="retry">Retry</string>
+    <string name="ok">OK</string>
+    <string name="unknown_error">Unknown error happened</string>
+    <string name="message">Message</string>
+    <string name="search">Search</string>
+    <string name="new_group">New Group</string>
+    <string name="logout">Logout</string>
+    <string name="add_people">Add people</string>
+    <string name="enter_group_name">Enter Group Name</string>
+    <string name="members">%d members</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose_your_profile_picture">Choose your profile picture</string>
+    <string name="join_group">JOIN GROUP</string>
+    <string name="phone_number">Phone number</string>
+    <string name="last_seen_recently">last seen recently</string>
+    <string name="last_seen_at">last seen at %s</string>
+    <string name="online">Online</string>
+    <string name="delete">Delete</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied</string>
+    <string name="edit">Edit</string>
+    <string name="edit_mode">Edit Mode</string>
+    <string name="server_reject_your_connection">Server reject your connection!</string>
+    <string name="connectiong">Connecting..</string>
+</resources>

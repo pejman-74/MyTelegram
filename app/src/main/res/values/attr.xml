@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressFloatingActionButton">
+        <attr name="pfab_color" format="color" />
+        <attr name="pfab_margin" format="dimension" />
+        <attr name="pfab_width" format="dimension" />
+        <attr name="pfab_startAngel" format="float" />
+        <attr name="pfab_animationDuration" format="integer" />
+        <attr name="pfab_arcProportion" format="float" />
+        <attr name="pfab_showEditModePreview" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="highlightEnable" format="boolean" />
+        <attr name="highlightColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarImageView">
+        <attr name="avatarBackgroundColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="text" format="string" />
+        <attr name="view_state" format="enum">
+            <enum name="INITIAL" value="1" />
+            <enum name="IMAGE" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_create_group"
+            android:icon="@drawable/ic_group"
+            android:title="@string/new_group" />
+        <item
+            android:id="@+id/menu_logout"
+            android:icon="@drawable/ic_login"
+            android:title="@string/logout" />
+    </group>
+</menu>
