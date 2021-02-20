@@ -1,6 +1,5 @@
 package com.mytelegram.ui.home
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asLiveData
@@ -14,11 +13,14 @@ import com.mytelegram.data.repository.HomeRepository
 import com.mytelegram.ui.base.BaseViewModel
 import com.mytelegram.util.mainUser
 import com.mytelegram.util.stringToJsonObject
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.socket.client.Socket
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
-class HomeViewModel @ViewModelInject constructor(
+@HiltViewModel
+class HomeViewModel @Inject constructor(
         private val homeRepository: HomeRepository
 ) : BaseViewModel() {
 

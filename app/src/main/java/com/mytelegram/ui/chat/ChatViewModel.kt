@@ -1,6 +1,5 @@
 package com.mytelegram.ui.chat
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mytelegram.data.model.ConversationUser
@@ -12,9 +11,11 @@ import com.mytelegram.data.model.resouces.Resource
 import com.mytelegram.data.network.UserApi
 import com.mytelegram.data.repository.ChatRepository
 import com.mytelegram.ui.base.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
-
-class ChatViewModel @ViewModelInject constructor(private val chatRepository: ChatRepository) :
+import javax.inject.Inject
+@HiltViewModel
+class ChatViewModel @Inject constructor(private val chatRepository: ChatRepository) :
         BaseViewModel() {
 
     private var _roomWithMessagesAndUsers = MutableLiveData<RoomWithMessagesAndUsers>()

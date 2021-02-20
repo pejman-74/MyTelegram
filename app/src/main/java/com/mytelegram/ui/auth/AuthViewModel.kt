@@ -1,6 +1,5 @@
 package com.mytelegram.ui.auth
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mytelegram.data.model.MainUser
@@ -10,9 +9,11 @@ import com.mytelegram.data.model.resouces.EventResource
 import com.mytelegram.data.model.resouces.Resource
 import com.mytelegram.data.repository.AuthRepository
 import com.mytelegram.ui.base.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.socket.client.Socket
-
-class AuthViewModel @ViewModelInject constructor(private val authRepository: AuthRepository) :
+import javax.inject.Inject
+@HiltViewModel
+class AuthViewModel @Inject constructor(private val authRepository: AuthRepository) :
     BaseViewModel() {
     override fun onCleared() {
         io { authRepository.disconnectFromAuthServer() }

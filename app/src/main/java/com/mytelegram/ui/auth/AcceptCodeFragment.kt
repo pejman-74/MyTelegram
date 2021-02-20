@@ -3,8 +3,8 @@ package com.mytelegram.ui.auth
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
 import androidx.navigation.fragment.navArgs
-import androidx.navigation.navGraphViewModels
 import com.mytelegram.R
 import com.mytelegram.data.model.resouces.ConnectionStatus
 import com.mytelegram.data.model.resouces.Resource
@@ -71,9 +71,9 @@ class AcceptCodeFragment : BaseFragment<AuthViewModel, FragmentAcceptCodeBinding
         }
     }
 
-    //because login and accept code fragment inside in nested graph used navGraphViewModel
+    //because login and accept code fragment inside in nested graph used hiltNavGraphViewModels
     override fun getViewModel() =
-            navGraphViewModels<AuthViewModel>(R.id.auth_graph) { defaultViewModelProviderFactory }
+            hiltNavGraphViewModels<AuthViewModel>(R.id.auth_graph)
 
     override fun getViewBinding(layoutInflater: LayoutInflater, container: ViewGroup?) =
             FragmentAcceptCodeBinding.inflate(layoutInflater, container, false)
